@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import './Sale_Report.css'; // Ensure this path is correct
+import ReactDOMServer from 'react-dom/server';
+import './Sale_Report.css'; 
+import PrintReceipt from '../../components/PrintReceipt/PrintReceipt'; // Adjust path as per your project structure
 
 const SaleReport = ({ initialData }) => {
   const [query, setQuery] = useState('');
@@ -21,18 +23,12 @@ const SaleReport = ({ initialData }) => {
   };
 
   const handlePrint = (item) => {
-    const printContent = `
-      Date: ${item.date}\n
-      Invoice Number: ${item.invoiceNumber}\n
-      Customer Name: ${item.customerName}\n
-      Transaction Type: ${item.transactionType}\n
-      Payment Mode: ${item.paymentMode}\n
-      Amount: ${item.amount}\n
-      Balance Due: ${item.balanceDue}\n
-      Total Amount: ${item.totalAmount}\n
-    `;
     const printWindow = window.open('', '', 'height=400,width=600');
-    printWindow.document.write('<pre>' + printContent + '</pre>');
+    printWindow.document.write('<html><head><title>Print</title></head><body>');
+    const printableComponent = <PrintReceipt item={item} />;
+    const componentHtml = ReactDOMServer.renderToStaticMarkup(printableComponent);
+    printWindow.document.write(componentHtml);
+    printWindow.document.write('</body></html>');
     printWindow.document.close();
     printWindow.print();
   };
