@@ -1,99 +1,126 @@
-
 .salereport {
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    align-items: start;
-    margin-left: -50px;
-  }
-  
-  .salereport h2 {
-    text-align: start   ;
-    margin-bottom: 20px;
-  }
-  
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  margin-left: -50px;
+}
+
+.salereport h2 {
+  text-align: start;
+  margin-bottom: 20px;
+}
+.container3{
+  margin-right: -770px;
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.select_menu {
+  height: 30px;
+  width: 200px;
+}
+
+.container2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-box {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table th, .table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #f2f2f2;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
   .search-container {
-    display: flex;
-    width: 450px;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
+    width: 350px;
   }
-  
+}
+
+@media (max-width: 768px) {
+  .salereport {
+    margin-left: 0;
+  }
+
+  .search-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
   .search-box {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    width: 100%; /* Ensure search box spans full width */
+    max-width: none; /* Remove max-width to allow flexibility */
+    margin-bottom: 10px;
   }
-  
+
   button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-    border-radius: 4px;
+    width: 100%; /* Ensure button spans full width */
+    max-width: none; /* Remove max-width to allow flexibility */
   }
-  
-  button:hover {
-    background-color: #0056b3;
+
+  .table th,
+  .table td {
+    padding: 8px; /* Reduced padding for smaller screens */
+    font-size: 14px; /* Smaller font size */
   }
-  
-  .table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+}
+
+@media (max-width: 576px) {
+  .table th,
+  .table td {
+    padding: 6px; /* Further reduced padding for smallest screens */
+    font-size: 12px; /* Smallest font size */
   }
-  
-  .table th, .table td {
-    padding: 10px;
-    text-align: left;
-    border: 1px solid #ddd;
+
+  .search-box {
+    padding: 6px;
   }
-  
-  .table th {
-    background-color: #f2f2f2;
+
+  button {
+    padding: 6px 12px;
   }
-  
-  .table tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-  
-  .table tr:hover {
-    background-color: #f1f1f1;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .table th, .table td {
-      padding: 8px;
-      font-size: 14px;
-    }
-  
-    .search-box {
-      padding: 8px;
-    }
-  
-    button {
-      padding: 8px 16px;
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .table th, .table td {
-      padding: 6px;
-      font-size: 12px;
-    }
-  
-    .search-box {
-      padding: 6px;
-    }
-  
-    button {
-      padding: 6px 12px;
-    }
-  
-    .table {
-      font-size: 12px;
-    }
-  }
+}
