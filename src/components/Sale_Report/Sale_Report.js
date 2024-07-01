@@ -133,17 +133,6 @@ const SaleReport = ({ initialData }) => {
           <button type="submit">Search</button>
         </form>
         <hr />
-        <div className='container3'>
-          <select className="select_menu" onChange={handleSort}>
-            <option value="customerName">Sort by Customer Name</option>
-            <option value="date">Sort by Date</option>
-            <option value="invoiceNumber">Sort by Invoice No.</option>
-            <option value="transactionType">Sort by Transaction Type</option>
-            <option value="paymentMode">Sort by Payment Mode</option>
-            <option value="amount">Sort by Amount</option>
-            <option value="totalAmount">Sort by Total Amount</option>
-          </select>
-        </div>
         <table className="table" id="purchaseTable">
           <thead>
             <tr>

@@ -39,13 +39,13 @@ const Sidebar = () => {
           )}
         </li>
         <li>
-          <Link to="/sale" onClick={() => handleSectionClick('sale')}>
+          <Link to="/" onClick={() => handleSectionClick('sale')}>
           <img className='cartimage' src={cartimage} alt=''/>
           Sales</Link>
           {activeSection === 'sale' && (
             <ul className="sub-links">
-              <li><Link to="/sale/orders">Orders</Link></li>
-              <li><Link to="/sale/customers">Customers</Link></li>
+              <li><Link to="/sale/Sale_list">New Sale</Link></li>
+              <li><Link to="/sale/salelist">Sale List</Link></li>
             </ul>
           )}
         </li>

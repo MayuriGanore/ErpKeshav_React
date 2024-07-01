@@ -1,0 +1,96 @@
+/* Container styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Invoice header styling */
+h2, h3, h4 {
+    margin-bottom: 10px;
+}
+
+.invoice-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.invoice-details {
+    margin-bottom: 20px;
+}
+
+.invoice-details .row {
+    margin-bottom: 10px;
+}
+
+/* Table styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.table thead {
+    background-color: #f8f9fa;
+}
+
+.table thead th {
+    padding: 10px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.table tbody td {
+    padding: 10px;
+    text-align: left;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+/* Form styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.balance {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.balance .form-control {
+    text-align: right;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .invoice-details .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .invoice-details .row > div {
+        margin-bottom: 10px;
+    }
+
+    .invoice-terms {
+        margin-top: 20px;
+    }
+
+    .subtotal-form {
+        margin-top: 20px;
+    }
+}
