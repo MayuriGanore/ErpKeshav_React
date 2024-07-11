@@ -33,8 +33,8 @@ const Sidebar = () => {
           Stock</Link>
           {activeSection === 'stock' && (
             <ul className="sub-links">
-              <li><Link to="/stock/inventory">Inventory</Link></li>
-              <li><Link to="/stock/warehousing">Warehousing</Link></li>
+              <li><Link to="/stock/addproduct">Add Product</Link></li>
+              <li><Link to="product/productlist">Product List</Link></li>
             </ul>
           )}
         </li>

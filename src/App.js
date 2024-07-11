@@ -9,6 +9,7 @@ import Sale_Report from "./components/Sale_Report/Sale_Report";
 import Sale_list from "./components/Sale_list/Sale_list";
 import Purchase_Report from './components/Purchase_Report/Purchase_Report';
 import Invoice from './components/Invoice/Invoice';
+import Add_Product from "./components/Add_Product/Add_Product";
 import Layout from "./Layout"
 
 function App() {
@@ -57,6 +58,7 @@ function App() {
                     <Route path="/report/sale" element={<Sale_Report initialData={salesData} />} />
                     <Route path="/report/purchases" element={<Purchase_Report initialData={salesData} />} />
                     <Route path="/sale/salelist" element={<Sale_list initialData={salesData} />} />
+                    <Route path="/stock/addproduct" element={<Add_Product/>}/>
                 </Route>
                 <Route path="/invoice" element={<Invoice />} />
             </Routes>
