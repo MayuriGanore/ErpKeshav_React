@@ -23,7 +23,7 @@ const Sidebar = () => {
 
       <ul>
         <li>
-          <Link to="/" onClick={() => handleSectionClick('home')}>
+          <Link to="/dashboard" onClick={() => handleSectionClick('home')}>
           <img className='homeimage' src={homeimage} alt=''/>
           Dashboard</Link>
         </li>
@@ -34,7 +34,7 @@ const Sidebar = () => {
           {activeSection === 'stock' && (
             <ul className="sub-links">
               <li><Link to="/stock/addproduct">Add Product</Link></li>
-              <li><Link to="product/productlist">Product List</Link></li>
+              <li><Link to="/product/productlist">Product List</Link></li>
             </ul>
           )}
         </li>
@@ -44,7 +44,7 @@ const Sidebar = () => {
           Sales</Link>
           {activeSection === 'sale' && (
             <ul className="sub-links">
-              <li><Link to="/sale/Sale_list">New Sale</Link></li>
+              <li><Link to="/sale/newsale">New Sale</Link></li>
               <li><Link to="/sale/salelist">Sale List</Link></li>
             </ul>
           )}
