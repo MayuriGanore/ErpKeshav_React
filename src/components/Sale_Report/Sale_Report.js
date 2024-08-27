@@ -47,31 +47,7 @@ const SaleReport = ({ initialData }) => {
     }
   };
 
-  const handleSort = (event) => {
-    const sortOption = event.target.value;
-    setSortOption(sortOption);
-    const sortedData = [...filteredData].sort((a, b) => {
-      switch (sortOption) {
-        case 'customerName':
-          return a.customerName.localeCompare(b.customerName);
-        case 'date':
-          return new Date(a.date) - new Date(b.date);
-        case 'invoiceNumber':
-          return a.invoiceNumber.localeCompare(b.invoiceNumber);
-        case 'transactionType':
-          return a.transactionType.localeCompare(b.transactionType);
-        case 'paymentMode':
-          return a.paymentMode.localeCompare(b.paymentMode);
-        case 'amount':
-          return a.amount - b.amount;
-        case 'totalAmount':
-          return a.totalAmount - b.totalAmount;
-        default:
-          return 0;
-      }
-    });
-    setFilteredData(sortedData);
-  };
+  
 
   const handlePrint = (item) => {
     const printWindow = window.open('', '', 'fullscreen=yes, height=10000px, width=1000px');
@@ -108,18 +84,6 @@ const SaleReport = ({ initialData }) => {
   return (
     <div className="container">
       <div className="salereport">
-        <h2>Sales Report</h2>
-        <div className="container2">
-          <select className="select_menu" onChange={(e) => setSearchOption(e.target.value)}>
-            <option value="customerName">Search by Customer Name</option>
-            <option value="date">Search by Date</option>
-            <option value="invoiceNumber">Search by Invoice No.</option>
-            <option value="transactionType">Search by Transaction Type</option>
-            <option value="paymentMode">Search by Payment Mode</option>
-            <option value="amount">Search by Amount</option>
-            <option value="totalAmount">Search by Total Amount</option>
-          </select>
-        </div>
         <form onSubmit={handleSearch} className="search-container">
           <input
             id="searchBox"
