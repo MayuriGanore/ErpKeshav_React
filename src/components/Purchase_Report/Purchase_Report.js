@@ -111,18 +111,6 @@ const getPlaceholderText = () => {
   return (
     <div className="container">
       <div className="purchasereport">
-        <h2>Purchase Report</h2>
-        <div className="container2">
-          <select className="select_menu" onChange={(e) => setSearchOption(e.target.value)}>
-            <option value="customerName">Search by Customer Name</option>
-            <option value="date">Search by Date</option>
-            <option value="invoiceNumber">Search by Invoice No.</option>
-            <option value="transactionType">Search by Transaction Type</option>
-            <option value="paymentMode">Search by Payment Mode</option>
-            <option value="amount">Search by Amount</option>
-            <option value="totalAmount">Search by Total Amount</option>
-          </select>
-        </div>
         <form onSubmit={handleSearch} className="search-container">
           <input
             id="searchBox"
@@ -136,17 +124,6 @@ const getPlaceholderText = () => {
           <button type="submit">Search</button>
         </form>
         <hr/>
-        <div className='container3'>
-          <select className="select_menu" onChange={handleSort}>
-            <option value="customerName">Sort by Customer Name</option>
-            <option value="date">Sort by Date</option>
-            <option value="invoiceNumber">Sort by Invoice No.</option>
-            <option value="transactionType">Sort by Transaction Type</option>
-            <option value="paymentMode">Sort by Payment Mode</option>
-            <option value="amount">Sort by Amount</option>
-            <option value="totalAmount">Sort by Total Amount</option>
-          </select>
-        </div>
         <table className="table" id="purchaseTable">
           <thead>
             <tr>
